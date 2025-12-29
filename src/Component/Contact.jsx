@@ -1,13 +1,14 @@
 import React from 'react';
 import logo from '../assets/logo.jpeg'
-const Footer = () => {
+const Contact = () => {
+   const contactData = {
+  address: "Pani Tanki Road, Near Registry Office, Motipur, Muzaffarpur, Bihar - 843111",
+  phone: "8935898684, 8587867893",
+  email: "theivinternationalschool@gmail.com",
+};
   return (
     <>
-      {/* Google Material Icons */}
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-      />
+    
 
       <footer id='contact' className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* CTA Banner - Top */}
@@ -57,7 +58,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white">
-                    THE i.v. international school
+                    THE I.V. International school
                   </h3>
                   <p className="text-blue-400 text-sm">
                     Excellence in Education
@@ -91,8 +92,8 @@ const Footer = () => {
                 Get in Touch
               </h4>
               <div className="space-y-6">
-                <a 
-                  href="#"
+                <div 
+                  
                   className="flex items-start gap-4 p-5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 hover:border-blue-500/50 transition-all group"
                 >
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
@@ -102,12 +103,14 @@ const Footer = () => {
                   </div>
                   <div>
                     <p className="text-gray-500 text-xs uppercase tracking-wide mb-1 font-semibold">Visit Us</p>
-                    <p className="text-white text-base font-medium">YOUR SCHOOL ADDRESS</p>
+                    <p className="text-white text-base font-medium">
+                      {contactData.address}
+                    </p>
                   </div>
-                </a>
+                </div>
 
-                <a 
-                  href="tel:YOUR_PHONE"
+                <div
+                  
                   className="flex items-start gap-4 p-5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 hover:border-blue-500/50 transition-all group"
                 >
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
@@ -117,12 +120,14 @@ const Footer = () => {
                   </div>
                   <div>
                     <p className="text-gray-500 text-xs uppercase tracking-wide mb-1 font-semibold">Call Us</p>
-                    <p className="text-white text-base font-medium">YOUR PHONE NUMBER</p>
+                    <p className="text-white text-base font-medium">
+                      {contactData.phone}
+                    </p>
                   </div>
-                </a>
+                </div>
 
-                <a 
-                  href="mailto:YOUR_EMAIL"
+                <div
+                
                   className="flex items-start gap-4 p-5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 hover:border-blue-500/50 transition-all group"
                 >
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
@@ -132,9 +137,12 @@ const Footer = () => {
                   </div>
                   <div>
                     <p className="text-gray-500 text-xs uppercase tracking-wide mb-1 font-semibold">Email Us</p>
-                    <p className="text-white text-base font-medium">YOUR EMAIL ADDRESS</p>
+                    <p className="text-white text-base font-medium">
+                      
+                      {contactData.email}
+                    </p>
                   </div>
-                </a>
+                </div>
               </div>
             </div>
           </div>
@@ -143,19 +151,11 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
-            <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 w-full ">
               <p className="text-gray-400 text-sm text-center sm:text-left">
-                © 2025 THE i.v. international school. All rights reserved.
+                © 2025 THE I.V. international school. All rights reserved.
               </p>
-              <div className="flex items-center gap-6 text-sm">
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  
-                </a>
-                <span className="text-gray-700">•</span>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  
-                </a>
-              </div>
+            
             </div>
           </div>
         </div>
@@ -164,4 +164,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Contact;

@@ -60,8 +60,7 @@ const AdmissionForm = () => {
     try {
       setLoading(true);
 
-      await fetch(
-        "https://script.google.com/macros/s/AKfycbzoz7CW0PmZZR2K9ndZozFRR7pLz9QrXVAHf1fPtm1OKZnqyKhodRomKr3_VYiB3RQ1/exec",
+      await fetch(import.meta.env.VITE_API_FORM_URL,
         {
           method: "POST",
           mode: "no-cors",
@@ -191,7 +190,7 @@ const AdmissionForm = () => {
               shadow-lg hover:shadow-xl disabled:opacity-60
               flex items-center justify-center gap-2"
           >
-            {loading ? "Submitting..." : "Register Now"}
+            {loading ? "Booking..." : "Book Now"}
             {!loading && (
               <span className="material-symbols-outlined text-xl">
                 arrow_forward

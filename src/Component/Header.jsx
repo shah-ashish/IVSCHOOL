@@ -1,34 +1,53 @@
-import React, { useState } from 'react';
-import logo from "../assets/logo.jpeg"
+import React, { useState, useEffect } from 'react';
+import logo from '../assets/logo.jpeg'
 const navTabs = [
   { name: 'Home', href: '#' },
+  {name:'Gallery',href:'#gallery'},
+
   { name: 'About', href: '#about' },
   { name: 'Programs', href: '#programs' },
- 
   { name: 'Contact', href: '#contact' },
 ];
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
     
 
-      <header className="bg-gradient-to-r from-blue-900 to-blue-800 text-white fixed top-0 z-50 shadow-lg w-full">
+      <header 
+        className={`bg-gradient-to-r from-blue-900 to-blue-800 text-white fixed top-0 z-50 shadow-lg w-full transition-transform duration-300 ${
+          isVisible ? 'translate-y-0' : '-translate-y-full'
+        }`}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between h-20">
             {/* Logo & School Name */}
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center border border-white/20">
-               <img src={logo} alt="school_logo" />
+              <div className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center border border-white/20 overflow-hidden">
+                <img src={logo} alt="schoolLogo" />
               </div>
               <div>
                 <h1 className="text-xl sm:text-2xl font-bold leading-tight">
-                  THE i.v.
+                  THE I.V
                 </h1>
                 <p className="text-xs sm:text-sm text-blue-200">
-                  international school
+                  International school
                 </p>
               </div>
             </div>
@@ -48,10 +67,12 @@ const Header = () => {
 
             {/* Enquiry Button & Mobile Menu */}
             <div className="flex items-center gap-3">
-              <a href='#admissions' className="hidden sm:flex items-center gap-2 bg-yellow-400 text-blue-900 px-6 py-2.5 rounded-lg font-bold hover:bg-yellow-300 transition-colors">
+              <a 
+                href='#admissions' 
+                className="hidden sm:flex items-center gap-2 bg-yellow-400 text-blue-900 px-6 py-2.5 rounded-lg font-bold hover:bg-yellow-300 transition-colors"
+              >
                 <span className="material-symbols-outlined text-xl">
                   contact_mail
-
                 </span>
                 <span>Book Counselling</span>
               </a>
@@ -82,12 +103,16 @@ const Header = () => {
                     {tab.name}
                   </a>
                 ))}
-                <button className="flex items-center justify-center gap-2 bg-yellow-400 text-blue-900 px-6 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors mt-2">
+                <a 
+                  href='#admissions'
+                  className="flex items-center justify-center gap-2 bg-yellow-400 text-blue-900 px-6 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors mt-2"
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   <span className="material-symbols-outlined text-xl">
                     contact_mail
                   </span>
                   <span>Book Counselling</span>
-                </button>
+                </a>
               </div>
             </nav>
           )}

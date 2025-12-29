@@ -11,6 +11,9 @@ import Footer from "./Component/Footer";
 
 import './App.css'
 import Header from "./Component/Header";
+import Gallery from "./Component/Gallery";
+import Facilities from "./Component/Facilities";
+import Faculty from "./Component/Faculty";
 
 function App() {
   return (
@@ -18,8 +21,12 @@ function App() {
       <Header/>
       <Hero />
       <AdmissionForm />
+
       <About />
+      <Gallery/>
       <WhyChooseUs />
+      <Facilities/>
+      <Faculty/>
      <AdmissionsInfo/>
      <Testimonial/>
      <Program/>

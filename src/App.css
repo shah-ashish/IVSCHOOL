@@ -2,3 +2,26 @@
 *{
     scroll-behavior: smooth;
 }
+
+html{
+    background:white;
+}
+
+
+css
+/* Container class */
+body {
+    /* 1. Hide for Firefox */
+    scrollbar-width: none;
+
+    /* 2. Hide for IE, Edge (Legacy) */
+    -ms-overflow-style: none;
+    
+    /* Ensure scrolling is still enabled */
+    overflow: auto; 
+}
+
+/* 3. Hide for Chrome, Safari, and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
