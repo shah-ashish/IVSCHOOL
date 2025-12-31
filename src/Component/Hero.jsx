@@ -1,8 +1,11 @@
 import React from 'react';
 
 const Hero = () => {
+
+
+  
   const heroData = {
-    title: "Welcome to THE IV international school",
+    title: " THE I.V. International school",
     subtitle: "Unlock Your Child's Brightest Future",
     session: "Admissions Open for Session 2026–27",
     tagline: "Where curiosity meets excellence and dreams turn into achievements",
@@ -34,7 +37,9 @@ const Hero = () => {
             </div>
 
             {/* Main Title */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight px-4">
+              <span className='text-lg sm:text-3xl font-bold leading-tight capitalize'>Welcome to</span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight px-4 uppercase">
+           
               {heroData.title}
             </h1>
 

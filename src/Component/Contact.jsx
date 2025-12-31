@@ -57,7 +57,7 @@ const Contact = () => {
                   
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white">
+                  <h3 className="text-2xl font-bold text-white uppercase">
                     THE I.V. International school
                   </h3>
                   <p className="text-blue-400 text-sm">
@@ -152,7 +152,7 @@ const Contact = () => {
         <div className="border-t border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 w-full ">
-              <p className="text-gray-400 text-sm text-center sm:text-left">
+              <p className="text-gray-400 text-sm text-center sm:text-left uppercase">
                 © 2025 THE I.V. international school. All rights reserved.
               </p>
             
