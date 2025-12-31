@@ -23,11 +23,11 @@ const galleryData = {
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
-const images = import.meta.glob("../assets/*.{png,jpg,jpeg,webp}", {
-  eager: true,
-  import: "default",
-});
-const getImage = (name) => images[`../assets/${name}`];
+// const images = import.meta.glob("../assets/*.{png,jpg,jpeg,webp}", {
+//   eager: true,
+//   import: "default",
+// });
+// const getImage = (name) => images[`../assets/${name}`];
 
   return (
     <section id='gallery' className="py-6 md:py-10 bg-gradient-to-b from-white to-blue-50 ">
@@ -55,7 +55,7 @@ const getImage = (name) => images[`../assets/${name}`];
             >
               {/* Image */}
               <img
-               src={getImage(image.image)}
+               src={`./assets/${image.image}`}
                 alt={`Gallery image ${image.id}`}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
@@ -100,7 +100,8 @@ const getImage = (name) => images[`../assets/${name}`];
           
           <div className="max-w-5xl w-full" onClick={(e) => e.stopPropagation()}>
             <img
-               src={getImage(selectedImage.image)}
+                             src={`./assets/${image.image}`}
+
  loading="lazy"
             
               alt={`Gallery image ${selectedImage.id}`}
