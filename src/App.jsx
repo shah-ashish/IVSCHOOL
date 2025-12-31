@@ -7,7 +7,6 @@ import Testimonial from "./Component/Testimonial";
 import Program from "./Component/Program";
 import FAQ from "./Component/Faq";
 import Contact from "./Component/Contact";
-import Footer from "./Component/Footer";
 
 import './App.css'
 import Header from "./Component/Header";
