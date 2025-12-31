@@ -40,7 +40,7 @@ const Header = () => {
             {/* Logo & School Name */}
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center border border-white/20 overflow-hidden">
-                <img src='./assets/logo.jpeg' alt="schoolLogo" />
+                <img src='./logo.jpeg' alt="schoolLogo" />
               </div>
               <div>
                 <h1 className="text-xl sm:text-2xl font-bold leading-tight">

@@ -53,7 +53,7 @@ const Contact = () => {
             <div>
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center">
-                                 <img src='./assets/logo.jpeg' alt="school_logo" />
+                                 <img src='./logo.jpeg' alt="school_logo" />
                   
                 </div>
                 <div>
