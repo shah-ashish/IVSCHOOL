@@ -38,7 +38,7 @@ const facultyData = {
     {
       name: "Miss. Chandrani Choudhury",
       location: "Siliguri",
-      qualification: "Pursuing M.A. (Science)",
+      qualification: "Pursuing M.Sc. (Science)",
       image: "CC",
       subject: "Science",
       philosophy: "I am a woman with a great interest in teaching and enthusiastic in letting students know the following points:",
