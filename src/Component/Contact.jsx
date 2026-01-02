@@ -1,16 +1,28 @@
 import React from 'react';
 
 const Contact = () => {
-   const contactData = {
-  address: "Pani Tanki Road, Near Registry Office, Motipur, Muzaffarpur, Bihar - 843111",
-  phone: "8935898684, 8587867893",
-  email: "theivinternationalschool@gmail.com",
-};
+  const contactData = {
+    address: "Pani Tanki Road, Near Registry Office, Motipur, Muzaffarpur, Bihar - 843111",
+    phone: "8935898684, 8587867893",
+    email: "theivinternationalschool@gmail.com",
+  };
+
+  // 🔹 EDIT SOCIAL URLS HERE ONLY
+  const socialData = {
+    facebook: {
+      profile: "https://www.facebook.com/share/1CxeGaFi6Y/",
+      logo: "https://cdn.simpleicons.org/facebook/ffffff",
+    },
+    instagram: {
+      profile: "https://www.instagram.com/the_i_v_international_school",
+      logo: "https://cdn.simpleicons.org/instagram/ffffff",
+    },
+  };
+
   return (
     <>
-    
-
       <footer id='contact' className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+
         {/* CTA Banner - Top */}
         <div className="bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
@@ -49,12 +61,12 @@ const Contact = () => {
         {/* Main Footer */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+
             {/* Brand Section */}
             <div>
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center">
-                                 <img src='./logo.jpeg' alt="school_logo" />
-                  
+                  <img src="./logo.jpeg" alt="school_logo" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white uppercase">
@@ -65,10 +77,11 @@ const Contact = () => {
                   </p>
                 </div>
               </div>
+
               <p className="text-gray-400 leading-relaxed text-lg mb-8">
                 Nurturing confident, creative, and compassionate learners ready for tomorrow's challenges. Building futures through excellence in education.
               </p>
-              
+
               {/* Mission Statement */}
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-6">
                 <div className="flex items-start gap-3 mb-3">
@@ -81,6 +94,35 @@ const Contact = () => {
                   To provide world-class education that empowers students to become lifelong learners and responsible global citizens.
                 </p>
               </div>
+
+              {/* 🔹 Social Media (DATA DRIVEN) */}
+              <div className="mt-8 flex items-center gap-4">
+                <a
+                  href={socialData.facebook.profile}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-all"
+                >
+                  <img
+                    src={socialData.facebook.logo}
+                    alt="Facebook"
+                    className="w-6 h-6"
+                  />
+                </a>
+
+                <a
+                  href={socialData.instagram.profile}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center hover:bg-pink-600 transition-all"
+                >
+                  <img
+                    src={socialData.instagram.logo}
+                    alt="Instagram"
+                    className="w-6 h-6"
+                  />
+                </a>
+              </div>
             </div>
 
             {/* Contact Info */}
@@ -91,74 +133,37 @@ const Contact = () => {
                 </span>
                 Get in Touch
               </h4>
+
               <div className="space-y-6">
-                <div 
-                  
-                  className="flex items-start gap-4 p-5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 hover:border-blue-500/50 transition-all group"
-                >
-                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                    <span className="material-symbols-outlined text-white text-2xl">
-                      location_on
-                    </span>
-                  </div>
-                  <div>
-                    <p className="text-gray-500 text-xs uppercase tracking-wide mb-1 font-semibold">Visit Us</p>
-                    <p className="text-white text-base font-medium">
-                      {contactData.address}
-                    </p>
-                  </div>
+                <div className="flex items-start gap-4 p-5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl">
+                  <span className="material-symbols-outlined text-white text-2xl">location_on</span>
+                  <p className="text-white">{contactData.address}</p>
                 </div>
 
-                <div
-                  
-                  className="flex items-start gap-4 p-5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 hover:border-blue-500/50 transition-all group"
-                >
-                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                    <span className="material-symbols-outlined text-white text-2xl">
-                      call
-                    </span>
-                  </div>
-                  <div>
-                    <p className="text-gray-500 text-xs uppercase tracking-wide mb-1 font-semibold">Call Us</p>
-                    <p className="text-white text-base font-medium">
-                      {contactData.phone}
-                    </p>
-                  </div>
+                <div className="flex items-start gap-4 p-5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl">
+                  <span className="material-symbols-outlined text-white text-2xl">call</span>
+                  <p className="text-white">{contactData.phone}</p>
                 </div>
 
-                <div
-                
-                  className="flex items-start gap-4 p-5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 hover:border-blue-500/50 transition-all group"
-                >
-                  <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                    <span className="material-symbols-outlined text-white text-2xl">
-                      mail
-                    </span>
-                  </div>
-                  <div>
-                    <p className="text-gray-500 text-xs uppercase tracking-wide mb-1 font-semibold">Email Us</p>
-                    <p className="text-white text-base font-medium">
-                      
-                      {contactData.email}
-                    </p>
-                  </div>
+                <div className="flex items-start gap-4 p-5 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl">
+                  <span className="material-symbols-outlined text-white text-2xl">mail</span>
+                  <p className="text-white">{contactData.email}</p>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 w-full ">
-              <p className="text-gray-400 text-sm text-center sm:text-left uppercase">
-                © 2025 THE I.V. international school. All rights reserved.
-              </p>
-            
-            </div>
+            <p className="text-gray-400 text-sm text-center uppercase">
+              © 2025 THE I.V. international school. All rights reserved.
+            </p>
           </div>
         </div>
+
       </footer>
     </>
   );
