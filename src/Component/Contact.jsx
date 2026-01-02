@@ -101,12 +101,12 @@ const Contact = () => {
                   href={socialData.facebook.profile}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-all"
+                  className="w-16 h-16 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center hover:bg-blue-600 transition-all"
                 >
                   <img
                     src={socialData.facebook.logo}
                     alt="Facebook"
-                    className="w-6 h-6"
+                    className="w-12 h-12"
                   />
                 </a>
 
@@ -114,12 +114,12 @@ const Contact = () => {
                   href={socialData.instagram.profile}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center hover:bg-pink-600 transition-all"
+                  className="w-16 h-16 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center hover:bg-pink-600 transition-all"
                 >
                   <img
                     src={socialData.instagram.logo}
                     alt="Instagram"
-                    className="w-6 h-6"
+                    className="w-12 h-12"
                   />
                 </a>
               </div>

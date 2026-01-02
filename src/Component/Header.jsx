@@ -46,7 +46,7 @@ const Header = () => {
                 <h1 className="text-xl sm:text-2xl font-bold leading-tight">
                   THE I.V
                 </h1>
-                <p className="text-xs sm:text-sm font-bold">
+                <p className="text-xs sm:text-sm font-bold uppercase">
                   International school
                 </p>
               </div>
