@@ -4,35 +4,23 @@ const aboutData = {
   title: " THE I.V. International School",
   mission: "To nurture confident, creative, and compassionate learners ready for tomorrow's challenges.",
   items: [
-    {
-      icon: "school",
-      title: "Experienced & Caring Educators",
-      bgImage: "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600"
-    },
-    {
-      icon: "auto_stories",
-      title: "Preschool to Grade 12 Programs",
-      bgImage: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600"
-    },
-    {
-      icon: "devices",
-      title: "Smart Classrooms & Modern Infrastructure",
-      bgImage: "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?w=600"
-    },
-    {
-      icon: "sports_soccer",
-      title: "Sports, Arts & Co-curricular Activities",
-      bgImage: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600"
-    },
-    {
-      icon: "security",
-      title: "Safe & Nurturing Environment",
-      bgImage: "https://images.unsplash.com/photo-1544776193-352d25ca82cd?w=600"
-    },
+    { bgImage: "file1.png" },
+    { bgImage: "file2.png" },
+    { bgImage: "file3.png" },
+    { bgImage: "file4.png" },
+    { bgImage: "file5.png" },
+    { bgImage: "file6.png" },
+    { bgImage: "file7.png" },
   ],
 };
 
 const About = () => {
+
+  const images = import.meta.glob("../assets/*.{png,jpg,jpeg,webp}", {
+  eager: true,
+  import: "default",
+});
+const getImage = (name) => images[`../assets/${name}`];
   return (
     <>
       
@@ -60,31 +48,17 @@ const About = () => {
             {aboutData.items.map((item, index) => (
               <div
                 key={index}
-                className="group relative bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 h-64"
+                className="group relative bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
               >
-                {/* Background Image */}
-                <div 
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                  style={{
-                    backgroundImage: `url('${item.bgImage}')`
-                  }}
-                ></div>
+                {/* Image */}
+                <img 
+                  src={getImage(item.bgImage)}
+                  alt={`School facility ${index + 1}`}
+                  className="w-full h-auto object-contain transition-transform duration-500 group-hover:scale-105"
+                />
                 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/85 via-gray-900/60 to-gray-900/40"></div>
-
-                {/* Content */}
-                <div className="relative h-full flex flex-col items-center justify-end p-6 text-center">
-                  <div className="inline-flex items-center justify-center w-14 h-14 bg-white rounded-lg mb-3 shadow-lg">
-                    <span className="material-symbols-outlined text-blue-600 text-2xl">
-                      {item.icon}
-                    </span>
-                  </div>
-
-                  <h3 className="font-semibold text-white leading-snug text-base sm:text-lg">
-                    {item.title}
-                  </h3>
-                </div>
+                {/* Overlay on hover */}
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             ))}
           </div>
