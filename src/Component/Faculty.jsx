@@ -135,12 +135,7 @@ const Faculty = () => {
                             {member.location}
                           </p>
                         )}
-                        {member.qualification && (
-                          <p className="text-blue-100 text-sm md:text-base flex items-center gap-2">
-                            <span className="material-symbols-outlined text-lg">school</span>
-                            {member.qualification}
-                          </p>
-                        )}
+                     
                       </div>
                     </div>
                   </div>
