@@ -58,7 +58,7 @@ const facultyData = {
       position: "Senior Teacher",
       qualification: "M.A. (History)",
       image: "DK",
-      subject: "Mathematics, Science, Social Science",
+      subject: "Social Science",
       experience: "5 years",
       classes: "Up to 10th",
       philosophy: "Dedicated and student-focused teacher with strong subject knowledge and a clear, concept-based teaching approach. Believes in creating a positive classroom environment that encourages curiosity, discipline, and moral values while supporting overall student development.",
